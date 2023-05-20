@@ -25,7 +25,7 @@ let category=""
     
     function getData(){    
          
-      fetch(`http://localhost:4300/products?category=${category}&rating=${rating}&name=${name}&page=${page}`).then(res=>res.json())
+      fetch(`https://vast-plum-moth-gown.cyclic.app/products?category=${category}&rating=${rating}&name=${name}&page=${page}`).then(res=>res.json())
     .then(res=>{
       console.log(res)
       let proContainer=document.querySelector(".proContainer")
@@ -43,7 +43,7 @@ let category=""
 
         btn.addEventListener("click",()=>{
           console.log("cart")
-          fetch("http://localhost:4300/cart/create",{
+          fetch("https://vast-plum-moth-gown.cyclic.app/cart/create",{
             method:"POST",
             headers:{
             "Content-type":"application/json",

@@ -29,7 +29,7 @@ let signIn = document.querySelector(".signIn");
     let age=document.getElementById('age').value;
     let city=document.getElementById('city').value;
     let payload={name,email,password,gender,age,city}
-    fetch("http://localhost:4300/users/register",{
+    fetch("https://vast-plum-moth-gown.cyclic.app/users/register",{
         method:"POST",
         headers:{
             "Content-type":"application/json"
@@ -51,7 +51,7 @@ let signIn = document.querySelector(".signIn");
         password:document.getElementById("passLog").value
     }
     console.log(payload)
-    fetch("http://localhost:4300/users/login",{
+    fetch("https://vast-plum-moth-gown.cyclic.app/users/login",{
         method:"POST",
         headers:{
             "Content-type":"application/json"
